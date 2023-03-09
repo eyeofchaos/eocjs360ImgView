@@ -1,6 +1,6 @@
 /*!
  * eocjs360ImgView v0.1
- * Copyright (c) 2022 Dieter Schmitt
+ * Copyright (c) 2023 Dieter Schmitt
  * Released under the MIT license - https://opensource.org/licenses/MIT
  */
 
@@ -88,19 +88,19 @@ class Eocjs360ImgView {
   build() {
 
     // Variables
-    let needsUpdate = false;
-    let parentWidth = parseInt(getComputedStyle(this.canvas.parentNode, null).width.replace('px', ''));
+    let needsUpdate  =  false;
+    let parentWidth  =  parseInt(getComputedStyle(this.canvas.parentNode, null).width.replace('px', ''));
 
     // Factor
     this.ratio = parentWidth / this.settings.width;
 
     // Overwrite size, if parent element is too small
     if (this.ratio >= 1) {
-      this.width   =  this.settings.width;
-      this.height  =  this.settings.height;
+      this.width  = this.settings.width;
+      this.height = this.settings.height;
     } else {
-      this.width   =  parentWidth;
-      this.height  =  parseInt(this.settings.height * this.ratio);
+      this.width  = parentWidth;
+      this.height = parseInt(this.settings.height * this.ratio);
     }
 
     // Set threshold
@@ -255,10 +255,10 @@ class Eocjs360ImgView {
 
     down.forEach((event) => {
       this.canvas.addEventListener(event, (e) => {
-        let clientX  =  e.clientX;
+        let clientX = e.clientX;
         if (e.type === 'touchstart') clientX = e.touches[0].clientX;
-        startX     =  clientX;
-        dragging   =  true;
+        startX   = clientX;
+        dragging = true;
       });
     });
 
