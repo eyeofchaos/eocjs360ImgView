@@ -165,7 +165,7 @@ class Eocjs360ImgView {
 
     Promise.all(this.deferreds).then(() => {
       this.show360(this.settings.intro);
-    }).catch((error) => {
+    }).catch(error => {
       console.log(error);
       console.log('Error: At least one image could not be loaded!');
     });
@@ -253,8 +253,8 @@ class Eocjs360ImgView {
     let move      =  ['mousemove',  'touchmove'];
     let up        =  ['mouseup',     'touchend'];
 
-    down.forEach((event) => {
-      this.canvas.addEventListener(event, (e) => {
+    down.forEach(event => {
+      this.canvas.addEventListener(event, e => {
         let clientX = e.clientX;
         if (e.type === 'touchstart') clientX = e.touches[0].clientX;
         startX   = clientX;
@@ -262,8 +262,8 @@ class Eocjs360ImgView {
       });
     });
 
-    move.forEach((event) => {
-      window.addEventListener(event, (e) => {
+    move.forEach(event => {
+      window.addEventListener(event, e => {
         if (dragging === true) {
 
           let clientX = e.clientX;
@@ -281,8 +281,8 @@ class Eocjs360ImgView {
       });
     });
 
-    up.forEach((event) => {
-      window.addEventListener(event, (e) => {
+    up.forEach(event => {
+      window.addEventListener(event, e => {
         if (dragging === true) {
           dragging = false;
         }
