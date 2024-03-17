@@ -4,7 +4,7 @@ eocjs360ImgView is a tiny pet project of mine. It may be helpful for someone try
 
 ## Example
 
-Here is a working <a href="https://nightside.de/eocjs-360-img-view/example.html">eocjs360ImgView example</a>.
+Here is a working <a href="https://eyeofchaos.github.io/eocjs-360-img-view/example.html">eocjs360ImgView example</a>.
 
 ## License
 
